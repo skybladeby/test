@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-int main(args[]){
+int main(void){
 
-    int c,c1;
-    int count,first;
+    int c;
 
     do{
-	switch (c = getchar();) {
+	switch (c = getchar()) {
 	case '\t':
 	   printf("\\t");
 	   break;
@@ -16,11 +15,12 @@ int main(args[]){
 	case '\\':
 	   printf("\\\\");
 	   break;
-	case 'EOF':
+	case EOF:
 	   break;
 	default:
 	   putchar(c);
 	   break;
+	}
     }while (c != EOF);
 
  return 0;
